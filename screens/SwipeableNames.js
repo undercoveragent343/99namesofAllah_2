@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Swiper from 'react-native-swiper';
-// test
+import { AppStyles } from '../styles/AppStyles';
 export const SwipeableNames = ({ names }) => {
     return (
         <Swiper
-            style={styles.wrapper}
+            style={AppStyles.wrapper}
             loop
             showsPagination={false}
             autoplay={false}
@@ -13,6 +13,7 @@ export const SwipeableNames = ({ names }) => {
         >
             {names.map((name, index) => (
                 <View key={index} style={styles.slide}>
+                    <Text>{name.id}</Text>
                     <Text style={styles.arabicName}>{name.arabicName}</Text>
                     <Text style={styles.nameText}>{name.name}</Text>
                     <Text style={styles.meaningText}>{name.meaning}</Text>
@@ -28,12 +29,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#B2DFDB'
     },
     arabicName: {
-        fontSize: 48,
+        fontSize: 60,
         textAlign: 'center',
         marginBottom: 20,
+        padding: 40,
     },
     nameText: {
         fontSize: 24,

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Audio } from 'expo-av';
+import { AppStyles } from '../styles/AppStyles';
 
 const NameDetailsScreen = ({ route }) => {
   const { name, meaning, arabicName, sound } = route.params;
@@ -11,7 +12,7 @@ const NameDetailsScreen = ({ route }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={AppStyles.container}>
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.meaning}>{meaning}</Text>
       <Text style={styles.arabicName}>{arabicName}</Text>

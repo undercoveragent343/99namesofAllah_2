@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {View, StyleSheet, Button, Text, FlatList, TouchableOpacity} from 'react-native';
 import { SwipeableNames } from './SwipeableNames';
 import names from '../data/names';
+import { AppStyles } from '../styles/AppStyles';
 
 export const NameListScreen = ({ navigation }) => {
   const [isSwipeable, setIsSwipeable] = useState(false);
@@ -11,7 +12,7 @@ export const NameListScreen = ({ navigation }) => {
   };
 
   return (
-      <View style={styles.container}>
+      <View style={AppStyles.container}>
         <View style={styles.buttonContainer}>
           <Button title="Scroll View" onPress={() => setIsSwipeable(false)} />
           <Button title="Swipe View" onPress={() => setIsSwipeable(true)} />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Switch, TextInput, TouchableOpacity } from 'react-native';
 import ProgressBar from 'react-native-progress/Bar';
+import { AppStyles } from '../styles/AppStyles';
 
 export const MemorizationToolsScreen = () => {
   const [completedNames, setCompletedNames] = useState(0);
@@ -30,7 +31,7 @@ export const MemorizationToolsScreen = () => {
   };
 
   return (
-      <View style={styles.container}>
+      <View style={AppStyles.container}>
         <Text style={styles.sectionTitle}>Daily Goal:</Text>
         <View style={styles.row}>
           <Text style={styles.label}>4 Names per day (recommended)</Text>
